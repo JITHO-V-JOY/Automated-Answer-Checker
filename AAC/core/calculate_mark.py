@@ -1,4 +1,5 @@
 from core.HandWriting_Recognition.src.imageToText import pdfToText
+from core.grading.py import answerForSingleQuestion
 import re
 import bisect
 
@@ -83,7 +84,7 @@ def calculateMark():
        
        total = 0 # for storing total_marks
        for i in range(length):
-              total += markForOneQuestion(answerFromStudent[i], answerKeyList[i], 10))
+              total += answerForSingleQuestion(answerFromStudent[i], answerKeyList[i], 10))
               
 
        ####### Do similarity checking code here #######
